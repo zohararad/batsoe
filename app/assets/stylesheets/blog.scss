@@ -1,0 +1,42 @@
+@import "foundation/functions";
+
+.app-content {
+  margin-top: rem-calc(60);
+  min-height: 80%;
+}
+
+.app-footer{
+  margin-top: rem-calc(45);
+  background-color: #222;
+  color: #fff;
+  height: rem-calc(150);
+  text-align: center;
+
+  p {
+    margin-top: rem-calc(35);
+  }
+}
+
+.posts {
+
+  .post {
+    border-bottom: 1px solid #ededed;
+    margin-top: rem-calc(45);
+  }
+}
+.post {
+
+  h1.post-title {
+    font-size: rem-calc(36);
+    border-bottom: 1px solid #ededed;
+    margin-bottom: rem-calc(35);
+  }
+
+  .post-details p{
+    text-align: right;
+    background-color: #fafafa;
+    font-size: rem-calc(14);
+    padding: rem-calc(4) rem-calc(10);
+    margin-bottom: 0;
+  }
+}

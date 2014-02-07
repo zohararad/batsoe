@@ -13,6 +13,10 @@
 //= require jquery
 //= require moment-with-langs
 //= require ../batman/batsoe
+//= require foundation
 //= require_self
 
-moment.lang('en')
+$(function(){
+  //$(document).foundation();
+  moment.lang('en');
+});

@@ -42,6 +42,9 @@ GEM
     execjs (2.0.2)
     faker (1.2.0)
       i18n (~> 0.5)
+    foundation-rails (5.1.1.0)
+      railties (>= 3.1.0)
+      sass (>= 3.2.0)
     hike (1.2.3)
     i18n (0.6.9)
     jbuilder (1.5.3)
@@ -128,6 +131,7 @@ DEPENDENCIES
   batman-rails
   coffee-rails (~> 4.0.0)
   faker
+  foundation-rails
   jbuilder (~> 1.2)
   jquery-rails
   pg

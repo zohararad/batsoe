@@ -1,16 +1,41 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Batsoe</title>
-  <%= stylesheet_link_tag "application", :media => "all" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <div data-yield="main">
-    <%= yield if search_engine? %>
+    <title><%= content_for?(:title) ? yield(:title) : "Batso Blog" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+
+  <header class="app-header fixed">
+    <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="/" data-route="routes.root">Batsoe Blog</a></h1>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="app-content">
+    <div class="row">
+      <div data-yield="main" class="large-12 columns">
+        <%= yield if search_engine? %>
+      </div>
+    </div>
   </div>
-
+  <footer class="app-footer">
+    <div class="row">
+      <div class="large-12 columns">
+        <p>Batsoe Blog. &copy; <%= Time.now.strftime('%Y') %></p>
+      </div>
+    </div>
+  </footer>
   <%= render partial: 'layouts/batman_app' unless search_engine? %>
-</body>
+  </body>
 </html>

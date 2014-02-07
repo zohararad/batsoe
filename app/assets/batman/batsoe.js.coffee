@@ -35,6 +35,6 @@ class Batsoe extends Batman.App
 
   @resources 'posts', only: ['index', 'show']
   @route 'posts/:id/:slug', 'posts#show', as: 'post_slug'
-  @root 'posts#index'
+  @root 'posts#index', as: 'root'
 
 (global ? window).Batsoe = Batsoe
