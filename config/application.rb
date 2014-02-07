@@ -26,6 +26,10 @@ module Batsoe
     # config.i18n.default_locale = :de
 
     config.paths['app/views'].unshift("#{Rails.root}/app/assets/batman/html")
-    config.assets.precompile += %w( modernizr.custom.js )
+    config.assets.precompile = [ Proc.new { |path, fn|
+      fn =~ /app\/assets/ && !%w(.js .css .html).include?(File.extname(path)) },
+      /application.(css|js)$/,
+      'modernizr.custom.js'
+    ]
   end
 end

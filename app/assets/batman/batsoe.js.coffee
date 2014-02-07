@@ -3,7 +3,6 @@
 #= require batman/batman
 #= require batman/batman.rails
 
-#= require jquery
 #= require batman/batman.jquery
 
 #= require_self
