@@ -34,7 +34,7 @@ end
 
 gem 'rspec-rails'
 
-gem 'faker', group: :development
+gem 'faker'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
