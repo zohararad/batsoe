@@ -1,0 +1,1 @@
+class Batsoe.ApplicationController extends Batman.Controller

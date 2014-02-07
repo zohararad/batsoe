@@ -1,0 +1,9 @@
+<article class="post">
+  <header>
+    <h1 class="post-title" data-bind="post.title"><%= @post.title %></h1>
+  </header>
+  <div class="post-body" data-bind="post.body | raw"><%= raw @post.body %></div>
+  <footer class="post-details">
+    <p class="post-updated-at"data-bind="post.updated_at | formatDate 'DD MMM YYYY, HH:mm' | prepend 'Updated: '"><%= @post.updated_at.strftime('%d %b, %Y. %H:%M') %></p>
+  </footer>
+</article>

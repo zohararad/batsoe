@@ -1,0 +1,14 @@
+<section class="posts">
+  <%- @posts.each do |post| %>
+  <article class="post" data-foreach-post="posts">
+    <header>
+      <h1 class="post-title">
+        <a href="<%= post_slug_path(post.id, post.slug) %>" data-route="'post_slug' | asNamedRoute post.id, post.slug" data-bind="post.title"><%= post.title %></a>
+      </h1>
+    </header>
+    <footer class="post-details">
+      <p class="post-updated-at"data-bind="post.updated_at"><%= post.updated_at.strftime('%d %b %Y, %H:%M') %></p>
+    </footer>
+  </article>
+  <%- end %>
+</section>

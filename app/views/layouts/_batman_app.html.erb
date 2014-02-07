@@ -1,0 +1,13 @@
+<%= javascript_include_tag "application" %>
+<script type="text/javascript">
+  (function(){
+    var cachedTemplates = <%= raw batman_views_json %>
+
+    for(var view in cachedTemplates){
+      if(cachedTemplates.hasOwnProperty(view)){
+        Batman.View.store.set(view, cachedTemplates[view])
+      }
+    }
+    Batsoe.run();
+  }());
+</script>

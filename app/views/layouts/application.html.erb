@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Batsoe</title>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div data-yield="main">
+    <%= yield if search_engine? %>
+  </div>
+
+  <%= render partial: 'layouts/batman_app' unless search_engine? %>
+</body>
+</html>
