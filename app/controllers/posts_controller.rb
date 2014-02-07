@@ -2,8 +2,8 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
-    if request.xhr?
-      render json: @posts.to_json
+    if request.xhr? || request.format == :json
+      render json: @posts.as_json(only: [:id, :title, :body, :slug, :updated_at], methods: [:excerpt])
     else
       render
     end
@@ -12,7 +12,7 @@ class PostsController < ApplicationController
   def show
     @post = Post.find params[:id]
     if request.xhr?
-      render json: @post.to_json
+      render json: @post.as_json(only: [:id, :title, :body, :slug, :updated_at], methods: [:excerpt])
     else
       render
     end
